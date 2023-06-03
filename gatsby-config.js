@@ -60,6 +60,8 @@ module.exports = {
   },
   
   plugins: [
+    ["gatsby-plugin-netlify"],
+
     {
       resolve: 'gatsby-plugin-i18n',
       options: {
