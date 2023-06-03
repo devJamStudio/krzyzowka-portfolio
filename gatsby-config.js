@@ -35,6 +35,7 @@ module.exports = {
     'gatsby-plugin-postcss',
     'gatsby-plugin-provide-react',
     'gatsby-plugin-dark-mode',
+    `gatsby-plugin-netlify`,
     {
       resolve: 'gatsby-source-filesystem',
       options: {
