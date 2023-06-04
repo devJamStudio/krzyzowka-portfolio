@@ -75,7 +75,7 @@ const Footer = ({ siteTitle }) => {
 
         <div className="md:hidden flex border-t border-black">
           <div className="aspect-square flex-[2] sm:flex-[1] sm:w-[400px] md:flex-[2] sm:h-1/2  flex items-center justify-center border-l md:w-1/3 md:border-black">
-            <svg className="object-cover md:h-full md:w-full" viewBox="0 0 254 254" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className="object-cover md:h-full md:w-full stroke-black stroke-1" viewBox="0 0 254 254" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="127" cy="127" r="127" stroke="black" strokeWidth="1" fill="none" />
               <line x1="0" y1="127" x2="254" y2="127" stroke="black" strokeWidth="1" />
               <line x1="127" y1="0" x2="127" y2="254" stroke="black" strokeWidth="1" />

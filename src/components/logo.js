@@ -2,7 +2,7 @@ import * as React from "react"
 
 const Logo = (props) => (
   <svg
-    className = 'dark:fill-white fill-black'
+    className = 'fill-black'
     width={162}
     height={30}
     fill="none"
