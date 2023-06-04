@@ -43,15 +43,17 @@ import Seo from '../components/seo'
           content={post.description}
           
         />
-              <div className="container">
-              <div className='text-2xl'>
+              <div className="w-[95%] mx-auto ">
+                 <h1 className="text-3xl">{post.title}</h1>
+              
+              <div className='text-lg "w-[95%] mx-auto'>
               {post.body?.raw && renderRichText(post.body, options)}
             </div>
-              <h1>{post.title}</h1>
-              
+             
     
               </div>
               {(previous || next) && (
+                 <div className='text-lg w-[95%] mx-auto'>
               <nav>
                 <ul className="">
                   {previous && (
@@ -70,6 +72,7 @@ import Seo from '../components/seo'
                   )}
                 </ul>
               </nav>
+              </div>
             )}
             </Jam>
           )

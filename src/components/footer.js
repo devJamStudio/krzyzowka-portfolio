@@ -4,50 +4,67 @@ import React from "react"
 import Logo from '../components/logo'
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'
 
-const Footer = () => {
+const Footer = ({ siteTitle }) => {
   return (
-    <footer className="border border-black mt-5 text-white">
+    <footer className="border w-[95%] mb-[2.5%] mx-auto border-black mt-5 text-white">
       <div className="flex flex-col">
         <div className="md:flex justify-end">
-          <div className="p-8 md:border-r border-black md:w-1/3">
+          <div className="p-8 md:border-r border-black flex justify-between flex-col md:w-1/3">
             <Logo/>
+            <p className="text-black font-light text-2xl py-2">
+              Przykładowy tekst. Porozmawiajmy o Twoim projekcie.
+            </p>
+            <Link to="/kontakt" className="text-sm">
+              <button className="button px-8 py-4 bg-black hover:bg-white hover:text-black rounded-[30px] text-white">
+                Skontaktuj się
+              </button>
+            </Link>
           </div>
           <div className="border-black flex-grow md:w-2/3">
             <div className="md:border-b flex flex-row justify-between" id="ItemZ">
-              <div className="flex-col p-6">
-                <h2 className="text-lg font-bold mb-4">Column 2</h2>
-                <ul>
+              <div className="flex-col p-6 pr-0 flex lg:w-6/12">
+                <ul className="text-black mb-0 text-md font-light flex flex-col justify-between">
                   <li>
-                    <Link to="/blog" className="hover:text-gray-300">Blog</Link>
+                    <Link to="/portfolio" className="flex align-center no-underline text-black font-light">
+                      <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5002 5V19" stroke="black" stroke-linecap="square" stroke-linejoin="round"/>
+                        <path d="M5.50024 12H19.5002" stroke="black" stroke-linecap="square" stroke-linejoin="round"/>
+                      </svg>
+                      Portfolio
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/portfolio" className="hover:text-gray-300">Portfolio</Link>
+                    <Link to="/oferta" className="flex align-center no-underline text-black font-light">Oferta</Link>
                   </li>
                   <li>
-                    <Link to="/contact" className="hover:text-gray-300">Contact</Link>
+                    <Link to="/pracownia" className="flex align-center no-underline text-black font-light">Pracownia</Link>
+                  </li>
+                  <li>
+                    <Link to="/o-mnie" className="flex align-center no-underline text-black font-light">O mnie</Link>
+                  </li>
+                  <li>
+                    <Link to="/kontakt" className="flex align-center no-underline text-black font-light">Kontakt</Link>
                   </li>
                 </ul>
               </div>
-              <div className="aspect-square flex items-center justify-center border-l md:w-1/3 md:border-black">
-                <svg className="object-contain h-full w-auto" viewBox="0 0 254 254" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M252.5 127C252.5 196.312 196.366 252.5 127.121 252.5C57.8767 252.5 1.74219 196.312 1.74219 127C1.74219 57.6878 57.8767 1.5 127.121 1.5C196.366 1.5 252.5 57.6878 252.5 127Z" stroke="black" strokeMiterlimit="10"/>
-                  <line x1="128.268" y1="1" x2="128.268" y2="251.95" stroke="black"/>
-                  <line x1="251.709" y1="128.147" x2="1.00049" y2="128.147" stroke="black"/>
+              <div className="aspect-square flex items-center hidden md:flex justify-center border-l md:w-[263px] md:border-black">
+                <svg className="object-cover h-full w-full" viewBox="0 0 254 254" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="127" cy="127" r="127" stroke="black" strokeWidth="1" fill="none" />
+                  <line x1="0" y1="127" x2="254" y2="127" stroke="black" strokeWidth="1" />
+                  <line x1="127" y1="0" x2="127" y2="254" stroke="black" strokeWidth="1" />
                 </svg>
               </div>
             </div>
             <div className="invisible md:visible flex flex-row border-black border-t flex-row justify-end">
-              <div>
-                cokolwiek
-              </div>
-              <div className="social-icons flex w-1/3 border-black border-l">
-                <div className="social-icon aspect-square border-black border-r items-center flex justify-center p-4 w-1/3">
+              <div></div>
+              <div className="social-icons flex  md:w-[263px] border-black border-l">
+                <div className="social-icon text-2xl text-black aspect-square border-black border-r items-center flex justify-center p-4 w-1/3">
                   <FaFacebook />
                 </div>
-                <div className="social-icon flex border-black border-r items-center justify-center p-4 w-1/3">
+                <div className="social-icon flex text-2xl text-black  border-black border-r items-center justify-center p-4 w-1/3">
                   <FaTwitter />
                 </div>
-                <div className="social-icon flex justify-center items-center p-4 w-1/3">
+                <div className="social-icon flex text-2xl text-black justify-center items-center p-4 w-1/3">
                   <FaInstagram />
                 </div>
               </div>
@@ -57,27 +74,27 @@ const Footer = () => {
         </div>
 
         <div className="md:hidden flex border-t border-black">
-          <div className="aspect-square items-center justify-center w-full border-l md:border-black">
-            <svg className="object-contain h-full w-auto" viewBox="0 0 254 254" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M252.5 127C252.5 196.312 196.366 252.5 127.121 252.5C57.8767 252.5 1.74219 196.312 1.74219 127C1.74219 57.6878 57.8767 1.5 127.121 1.5C196.366 1.5 252.5 57.6878 252.5 127Z" stroke="black" strokeMiterlimit="10"/>
-              <line x1="128.268" y1="1" x2="128.268" y2="251.95" stroke="black"/>
-              <line x1="251.709" y1="128.147" x2="1.00049" y2="128.147" stroke="black"/>
+          <div className="aspect-square flex-[2] sm:flex-[1] sm:w-[400px] md:flex-[2] sm:h-1/2  flex items-center justify-center border-l md:w-1/3 md:border-black">
+            <svg className="object-cover md:h-full md:w-full" viewBox="0 0 254 254" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="127" cy="127" r="127" stroke="black" strokeWidth="0.5" fill="none" />
+              <line x1="0" y1="127" x2="254" y2="127" stroke="black" strokeWidth="0.5" />
+              <line x1="127" y1="0" x2="127" y2="254" stroke="black" strokeWidth="0.5" />
             </svg>
           </div>
-          <div className="social-icons w-full grid-1 w-1/4 border-black border-l">
-            <div className="social-icon w-full flex-col border-black border-b text-2xl items-center flex justify-center p-4 h-1/3">
+          <div className="social-icons w-auto sm:w-1/3 grid-1 border-black border-l">
+            <div className="social-icon w-full flex-col border-black border-b text-black text-2xl items-center flex justify-center p-4 h-1/3">
               <FaFacebook />
             </div>
-            <div className="social-icon w-full flex-col flex border-black border-b text-2xl items-center justify-center p-4 h-1/3">
+            <div className="social-icon w-full flex-col flex border-black  text-black  border-b text-2xl items-center justify-center p-4 h-1/3">
               <FaTwitter />
             </div>
-            <div className="social-icon w-full flex flex-col justify-center items-center text-2xl p-4 h-1/3">
+            <div className="social-icon w-full flex flex-col justify-center text-black   items-center text-2xl p-4 h-1/3">
               <FaInstagram />
             </div>
           </div>
         </div>
         <div className="py-8 md:hidden text-black border-t border-black w-full">
-          cokolwiek
+          {/* Additional content */}
         </div>
       </div>
     </footer>
@@ -89,7 +106,7 @@ Footer.propTypes = {
 }
 
 Footer.defaultProps = {
-  siteTitle: ``,
+  siteTitle: '',
 }
 
 export default Footer

@@ -6,7 +6,7 @@ import { Link } from "gatsby";
 const Instagram = () => {
   const data = useStaticQuery(graphql`
     query {
-      allInstagramContent (limit: 16){
+      allInstagramContent (limit: 24){
         edges {
           node {
             id
@@ -32,7 +32,7 @@ const Instagram = () => {
   const posts = data.allInstagramContent.edges;
 
   return (
-    <div className="py-8 border-t border-black grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-6">
+    <div className="py-8 border-black grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-6">
       {posts.map((post) => {
         const { id, caption, permalink, localImage } = post.node;
         const imageData = localImage.childImageSharp.gatsbyImageData;

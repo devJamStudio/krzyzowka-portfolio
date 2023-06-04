@@ -23,7 +23,7 @@ const Projects = () => {
   const projects = data.allContentfulPortolio.nodes;
 
   return (
-    <div className="py-8 border-t border-1 border-black grid  md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-6">
+    <div className="py-8  border-black grid md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-6">
       {projects.map((project, index) => {
         const imageData = project.image?.gatsbyImageData;
         const image = imageData ? (
@@ -47,12 +47,14 @@ const Projects = () => {
             className={`h-auto border border-solid border-black  col-span-1 max-w-full ${colSpanClass}`}
             style={{ textAlign: "col" }}
             key={index}
-          >
+          > <Link className="no-underline "
+          to={`/portfolio-test/${project.slug}/`}>
             {image}
+            </Link>
             <div className="py-4 flex justify-between px-4 border-black border-y">
               <Link className="no-underline "
               to={`/portfolio-test/${project.slug}/`}>
-                <h2 className="text-2xl text-black no-underline	 font-acumin">
+                <h2 className="text-2xl font-bold text-black no-underline	 font-acumin">
                   {project.title}
                 </h2>
               </Link>
@@ -62,10 +64,10 @@ const Projects = () => {
               {tags.length > 0 &&
                 tags.map((tag, tagIndex) => (
                   <React.Fragment key={tagIndex}>
-                    <Link to={`/tags/${tag}`} className="mr-2 text-black no-underline text-md">
+                    <Link to={`/tags/${tag}`} className=" text-black no-underline text-md">
                       {tag}
                     </Link>
-                    {tagIndex < tags.length - 1 && <span className="mr-2">+</span>}
+                    {tagIndex < tags.length - 1 && <span className="mx-2 ">+</span>}
                   </React.Fragment>
                 ))}
             </div>

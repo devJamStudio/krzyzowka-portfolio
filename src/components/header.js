@@ -38,8 +38,8 @@ function Header({ siteTitle }) {
     </svg>);
 
   return (
-    <nav className="flex font-acumin bg-krzyzowka dark:bg-gray-900 text-black dark:text-white dark:border-white flex-wrap w-full items-center justify-between border border-black p-6 bg-krzyzowka">
-      <div className="flex items-center flex-shrink-0 mr-6 dark:text-white text-black w-1/4">
+    <nav className="   flex font-acumin bg-krzyzowka dark:bg-gray-900 text-black overflow-hidden dark:text-white dark:border-white flex-wrap w-full items-center text-sm justify-between border border-black p-3 bg-krzyzowka  md:pr-0">
+      <div className="flex items-center flex-shrink-0 mr-6  dark:text-white text-black w-1/4">
         <Link to={`/`}>
           <Logo />
         </Link>
@@ -47,7 +47,7 @@ function Header({ siteTitle }) {
       <div className="flex lg:hidden">
         <button
           onClick={handleToggle}
-          className="flex items-center px-3 py-2 text-black  rounded hover:text-black hover:border-black"
+          className="flex items-center px-3 py-2 text-black rounded hover:text-black hover:border-black"
         >
           {isExpanded ? (
           <MenuCloseIcon/>
@@ -62,18 +62,26 @@ function Header({ siteTitle }) {
         } w-full block flex-grow lg:flex lg:items-center lg:w-auto`}
       >
         <div className="flex flex-col lg:flex-row justify-between sm:text-lg md:text-lg lg:text-lg xl:text-lg lg:flex-grow text-right dark:text-white ">
-          <Link
-            to={`/`}
-            href="#responsive-header"
-            className="block mt-4 mr-4 no-underline	 text-black lg:inline-block dark:text-white  lg:mt-0 hover:text-black"
-          >
-            Home
-          </Link>
+          
           <Link
             to={`/portfolio`}
             className="block mt-4 mr-4 text-black no-underline lg:inline-block dark:text-white  lg:mt-0 hover:text-black"
           >
             Portfolio
+          </Link>
+         
+          <Link
+            to={`/pracownia`}
+            className="block mt-4 mr-4 text-black no-underline lg:inline-block dark:text-white  lg:mt-0 hover:text-black"
+          >
+            Pracownia
+          </Link>
+          <Link
+            to={`/o-mnie`}
+            href="#responsive-header"
+            className="block mt-4 mr-4 no-underline	 text-black lg:inline-block dark:text-white  lg:mt-0 hover:text-black"
+          >
+            O mnie
           </Link>
           <Link
             to={`/kontakt`}
@@ -81,13 +89,15 @@ function Header({ siteTitle }) {
           >
             Kontakt
           </Link>
+          
           <Link
-            to={`/pracownia`}
-            className="block mt-4 mr-4 text-black no-underline lg:inline-block dark:text-white  lg:mt-0 hover:text-black"
+            to={`/oferta`}
+            href="#responsive-header"
+            id="oferta"
+            className="block mt-4 mr-4 no-underline	 font-semibold	text-black lg:inline-block dark:text-white  lg:mt-0 hover:text-black"
           >
-            Pracownia
+            Sprawdź ofertę
           </Link>
-          <ThemeToggle />
         </div>
       </div>
     </nav>

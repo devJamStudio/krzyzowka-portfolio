@@ -34,25 +34,27 @@ const Projects = () => {
     const tags = project.tags || [];
 
     return (
-      <div className="h-auto border border-solid border-black max-w-full" style={{ textAlign: 'col' }} key={index}>
-        {image}
-        <div className="py-4 px-4 border-black border-y">
-          <Link to={`/portfolio-test/${project.slug}/`}>
-            <h2 className="text-2xl text-black font-acumin">
+      <div className="h-auto border  border-solid border-black max-w-full" style={{ textAlign: 'col' }} key={index}>
+         <Link className="no-underline" 
+          to={`/portfolio-test/${project.slug}/`}>{image}    </Link>
+        <div className="py-4 px-4 border-black border-y flex justify-between">
+          <Link className="no-underline" 
+          to={`/portfolio-test/${project.slug}/`}>
+            <h2 className="text-2xl font-bold no-underline text-black font-acumin">
               {project.title}
             </h2>
           </Link>
-          {year && `${year}`}
+          <span className="text-2xl">{year && `${year}`}</span>
         </div>
-        <div>
+        <div className="p-4 ">
           {tags.length > 0 &&
             tags.map((tag, tagIndex) => (
               <Link
                 to={`/tags/${tag}`}
                 key={tagIndex}
-                className="mr-2"
-              >
-                #{tag}
+                className="text-black no-underline"
+              >{tag}
+                 {tagIndex < tags.length - 1 && <span className="mx-2">+</span>}
               </Link>
             ))}
         </div>

@@ -7,6 +7,13 @@ module.exports = {
   theme: {
  
     extend: {
+      screens: {
+        'xs': '420px',
+        'sm': '600px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+      },
       colors:{
         krzyzowka:'#E0ECE9'
       },
@@ -14,8 +21,9 @@ module.exports = {
         'acumin': ['acumin-pro', 'sans-serif']
         },
         fontSize: {
-          sm: ['14px', '20px'],
+          sm: ['13px', '20px'],
           base: ['16px', '24px'],
+          md:['18px','28px'],
           lg: ['1.5rem', '28.8px'],
           xl: ['24px', '32px'],
           '2xl':['2rem','32px'],
