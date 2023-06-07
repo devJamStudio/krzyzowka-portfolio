@@ -50,7 +50,7 @@ function ContactForm() {
         />
       </div>
 
-      <button type="submit" disabled={state.submitting} className="w-full flex rounded-[30px] justify-between bg-black text-white py-2 px-4 rounded-md flex items-center justify-center">
+      <button type="submit" disabled={state.submitting} className="w-full flex rounded-[50px!important] justify-between bg-black text-white py-2 px-4 rounded-md flex items-center justify-center">
         Wyślij wiadomość
         <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M2.66699 12H20.667" stroke="white" strokeWidth="2" strokeLinecap="square" strokeLinejoin="round"/>

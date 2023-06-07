@@ -13,7 +13,7 @@ const TagTemplate = ({ data, pageContext }) => {
     <Jam>
       <div className=" w-[95%] mx-auto py-5">
         <h1>Projects with Tag: {tag}</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 gap-[40px]">
           {edges.map((edge) => {
             const { title, slug, image, data, tags } = edge.node;
             const imageData = image?.gatsbyImageData;
@@ -29,24 +29,26 @@ const TagTemplate = ({ data, pageContext }) => {
                 key={slug}
               >
                 {projectImage}
-                <div className="my-4 flex justify-between px-4 border-black border-y">
-                  <Link to={`/portfolio-test/${slug}/`}>
-                    <h2 className="text-2xl text-black font-acumin">
+                <div className="py-4 px-4 border-black border-y flex justify-between">
+                  <Link className="text-xl font-bold no-underline font-semibold text-black font-acumin"
+                  to={`/portfolio-test/${slug}/`}>
+                    <h2 className="text-xl font-bold no-underline font-semibold text-black font-acumin">
                       {title}
                     </h2>
                   </Link>
-                  {year && <span className="ml-2 text-gray-500">{year}</span>}
+                  {year && <span className="ml-2 text-gray-500 font-acumin">{year}</span>}
                 </div>
-                <div className="flex flex-wrap px-4 py-2">
-                  {tags.map((tag, index) => (
-                    <Link
-                      to={`/tags/${tag}`}
-                      key={index}
-                      className="mr-2 mb-2 px-2 py-1 bg-gray-200 rounded-md text-sm text-gray-700"
-                    >
-                      {tag}
-                    </Link>
-                  ))}
+                <div className="p-4 ">
+                  {tags.length > 0 &&
+                    tags.map((tag, tagIndex) => (
+                      <Link
+                        to={`/tags/${tag}`}
+                        key={tagIndex}
+                        className="text-black no-underline font-acumin"
+                      >{tag}
+                        {tagIndex < tags.length - 1 && <span className="mx-2">+</span>}
+                      </Link>
+                    ))}
                 </div>
               </div>
             );

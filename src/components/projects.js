@@ -40,11 +40,11 @@ const Projects = () => {
         <div className="py-4 px-4 border-black border-y flex justify-between">
           <Link className="no-underline" 
           to={`/portfolio-test/${project.slug}/`}>
-            <h2 className="text-2xl font-bold no-underline text-black font-acumin">
+            <h2 className="text-xl font-bold no-underline  font-semibold text-black font-acumin">
               {project.title}
             </h2>
           </Link>
-          <span className="text-2xl">{year && `${year}`}</span>
+          <span className="text-xl font-acumin leading-[40px]">{year && `${year}`}</span>
         </div>
         <div className="p-4 ">
           {tags.length > 0 &&
@@ -52,7 +52,7 @@ const Projects = () => {
               <Link
                 to={`/tags/${tag}`}
                 key={tagIndex}
-                className="text-black no-underline"
+                className="text-black font-acumin no-underline"
               >{tag}
                  {tagIndex < tags.length - 1 && <span className="mx-2">+</span>}
               </Link>

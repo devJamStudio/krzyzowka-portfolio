@@ -38,8 +38,8 @@ function Header({ siteTitle }) {
     </svg>);
 
   return (
-    <nav className="   flex font-acumin bg-krzyzowka text-black overflow-hidden flex-wrap w-full items-center text-sm justify-between border border-black p-3 bg-krzyzowka  md:pr-0">
-      <div className="flex items-center flex-shrink-0 mr-6   text-black w-1/4">
+    <nav className=" flex items-center   px-[32px] md:h-[69px!important]  flex font-acumin bg-krzyzowka text-black overflow-hidden flex-wrap w-full items-center text-sm justify-between border border-black p-3 bg-krzyzowka ">
+      <div className="flex items-center flex-shrink-0    text-black w-1/4">
         <Link to={`/`}>
           <Logo />
         </Link>
@@ -61,40 +61,38 @@ function Header({ siteTitle }) {
           isExpanded ? `block` : `hidden`
         } w-full block flex-grow lg:flex lg:items-center lg:w-auto`}
       >
-        <div className="flex flex-col lg:flex-row justify-between sm:text-lg md:text-lg lg:text-lg xl:text-lg lg:flex-grow text-right dark:text-white ">
+        <div className="flex flex-col text-md lg:flex-row justify-between sm:text-lg md:text-lg lg:text-lg xl:text-lg lg:flex-grow text-right dark:text-white ">
           
           <Link
             to={`/portfolio`}
-            className="block mt-4 mr-4 text-black no-underline lg:inline-block dark:text-white  lg:mt-0 hover:text-black"
+            className="block mt-4 mr-4  text-md  text-black no-underline lg:inline-block dark:text-white  lg:mt-0 hover:text-black"
           >
             Portfolio
           </Link>
          
           <Link
             to={`/pracownia`}
-            className="block mt-4 mr-4 text-black no-underline lg:inline-block dark:text-white  lg:mt-0 hover:text-black"
+            className="block mt-4 mr-4   text-md  text-black no-underline lg:inline-block dark:text-white  lg:mt-0 hover:text-black"
           >
             Pracownia
           </Link>
           <Link
             to={`/o-mnie`}
-            href="#responsive-header"
-            className="block mt-4 mr-4 no-underline	 text-black lg:inline-block dark:text-white  lg:mt-0 hover:text-black"
+            className="block mt-4 mr-4   text-md  no-underline	 text-black lg:inline-block dark:text-white  lg:mt-0 hover:text-black"
           >
             O mnie
           </Link>
           <Link
             to={`/kontakt`}
-            className="block mt-4 mr-4 text-black no-underline lg:inline-block dark:text-white   lg:mt-0 hover:text-black"
+            className="block mt-4 mr-4 text-md  text-black no-underline lg:inline-block dark:text-white   lg:mt-0 hover:text-black"
           >
             Kontakt
           </Link>
           
           <Link
             to={`/oferta`}
-            href="#responsive-header"
             id="oferta"
-            className="block mt-4 mr-4 no-underline	 font-semibold	text-black lg:inline-block dark:text-white  lg:mt-0 hover:text-black"
+            className="block mt-4  text-md no-underline	 font-semibold	text-black lg:inline-block dark:text-white  lg:mt-0 hover:text-black"
           >
             Sprawdź ofertę
           </Link>

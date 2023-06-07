@@ -6,17 +6,17 @@ import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'
 
 const Footer = ({ siteTitle }) => {
   return (
-    <footer className="border w-[95%] mb-[2.5%] mx-auto border-black mt-5 text-white">
+    <footer className="border font-acumin w-[95%] mb-[2.5%] mx-auto border-black mt-5 text-white">
       <div className="flex flex-col">
         <div className="md:flex justify-end">
           <div className="p-8 md:border-r border-black flex justify-between flex-col md:w-1/3">
             <Logo/>
-            <p className="text-black font-light text-2xl py-2">
+            <p className="text-black font-light text-lg py-2">
               Przykładowy tekst. Porozmawiajmy o Twoim projekcie.
             </p>
             <Link to="/kontakt" className="text-sm">
-              <button className="button px-8 py-4 bg-black hover:bg-white hover:text-black rounded-[30px] text-white">
-                Skontaktuj się
+              <button  aria-label=" Skontaktuj się" className="button px-8 py-4 bg-black hover:bg-white hover:text-black rounded-[30px] text-white">
+              Skontaktuj się
               </button>
             </Link>
           </div>

@@ -7,10 +7,10 @@ import Seo from "../components/seo"
 
 const WorkShopPage = () => (
   <Jam>
-    <div className="w-[95%] mx-auto flex flex-col">
-      <div className="w-full">
-        <h1 className="text-2xl font-light md:text-3xl">
-          Witaj w <span className="font-bold">Pracowni grafiki Barbary Olejarczyk.</span>
+    <div className="w-[93%] mx-auto flex flex-col min-h-[50vh] items-center ">
+      <div className="w-full flex r ">
+        <h1 className="text-lg font-light md:text-[64px] mb-0 leading-[80px]">
+          Witaj w <span className="font-bold">Pracowni grafiki Barbary<br></br> Olejarczyk.</span>
         </h1>
       </div>
       <div className="w-full flex justify-end">

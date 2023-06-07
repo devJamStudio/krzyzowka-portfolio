@@ -22,11 +22,12 @@ module.exports = {
         },
         fontSize: {
           sm: ['13px', '20px'],
+          xm: ['16px', '20px'],
           base: ['16px', '24px'],
-          md:['18px','28px'],
+          md:['18px','24px'],
           lg: ['1.5rem', '28.8px'],
           xl: ['24px', '32px'],
-          '2xl':['2rem','32px'],
+          '2xl':['4rem','80px'],
           '3xl':['5rem','100px']
         }
     },
