@@ -15,16 +15,27 @@ function Header({ siteTitle }) {
   }
   const MenuIcon = () => (
     <svg
-      width="40"
-      height="19"
-      viewBox="0 0 40 19"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={24}
+    fill="none"
+  >
+    <g
+      stroke="#000"
+      strokeLinecap="square"
+      strokeLinejoin="round"
+      strokeWidth={1.5}
+      clipPath="url(#a)"
     >
-      <rect width="40" height="1" fill="black" />
-      <rect y="9" width="40" height="1" fill="black" />
-      <rect y="18" width="40" height="1" fill="black" />
-    </svg>);
+      <path d="M0 4h24M0 20h24M0 12h24" />
+    </g>
+    <defs>
+      <clipPath id="a">
+        <path fill="#fff" d="M0 0h24v24H0z" />
+      </clipPath>
+    </defs>
+  </svg>
+)
     const MenuCloseIcon = () => (
       <svg
       width="38"
@@ -38,16 +49,16 @@ function Header({ siteTitle }) {
     </svg>);
 
   return (
-    <nav className=" flex items-center   px-[32px] md:h-[69px!important]  flex font-acumin bg-krzyzowka text-black overflow-hidden flex-wrap w-full items-center text-sm justify-between border border-black p-3 bg-krzyzowka ">
-      <div className="flex items-center flex-shrink-0    text-black w-1/4">
+    <nav className=" flex items-center  md:h-[69px!important]  flex font-acumin bg-krzyzowka text-black overflow-hidden flex-wrap w-full items-center text-sm justify-between border border-black md:p-3 bg-krzyzowka ">
+      <div className="flex items-center flex-shrink-0   px-[30px] text-black w-1/4">
         <Link to={`/`}>
           <Logo />
         </Link>
       </div>
-      <div className="flex lg:hidden">
+      <div className="flex border spacect-square rounded-[50%] border-black lg:hidden">
         <button
           onClick={handleToggle}
-          className="flex items-center px-3 py-2 text-black rounded hover:text-black hover:border-black"
+          className="flex items-center p-4 text-black  hover:text-black "
         >
           {isExpanded ? (
           <MenuCloseIcon/>
@@ -59,7 +70,7 @@ function Header({ siteTitle }) {
       <div
         className={`${
           isExpanded ? `block` : `hidden`
-        } w-full block flex-grow lg:flex lg:items-center lg:w-auto`}
+        } w-full block  px-4 py-4 flex-grow lg:flex lg:items-center lg:w-auto`}
       >
         <div className="flex flex-col text-md lg:flex-row justify-between sm:text-lg md:text-lg lg:text-lg xl:text-lg lg:flex-grow text-right dark:text-white ">
           
