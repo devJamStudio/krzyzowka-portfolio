@@ -37,14 +37,16 @@ import Seo from '../components/seo'
             <Seo
           title={post.title}
         />
-           <Hero
+      
+              <div className="w-[95%] mx-auto ">
+              <Hero
+           className
           image={post.heroImage?.gatsbyImage}
           title={post.title}
           content={post.description}
           
         />
-              <div className="w-[95%] mx-auto ">
-                 <h1 className="text-3xl">{post.title}</h1>
+                 <h1 className="text-2xl my">{post.title}</h1>
               
               <div className='text-lg "w-[95%] mx-auto'>
               {post.body?.raw && renderRichText(post.body, options)}

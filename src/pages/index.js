@@ -9,10 +9,10 @@ import Instagram from "../components/instagram"
 const IndexPage = () => (
   <Jam>
     <div className="font-acumin 
-    flex min-h-[40vh] md:min-h-[50vh]  w-[95%] mx-auto	align-center justify-center text-center flex-col">
+    flex min-h-[30vh] md:min-h-[50vh]  w-[95%] mx-auto	align-center justify-center text-center flex-col">
       <span>Miasto Łódź</span>
       <h1 
-      className=" text-left text-lg sm:text-2xl  font-light md:text-2xl"
+      className=" md:text-left text-xl sm:text-2xl  font-light md:text-2xl"
       >Pracownia grafiki dla <span className="font-semibold">małych,
       niezależnych marek</span> i silnych osobowości.</h1>
     </div>

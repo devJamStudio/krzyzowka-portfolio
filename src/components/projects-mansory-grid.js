@@ -27,7 +27,7 @@ const Projects = () => {
       {projects.map((project, index) => {
         const imageData = project.image?.gatsbyImageData;
         const image = imageData ? (
-          <GatsbyImage image={imageData} alt={project.title} style={{}} />
+          <GatsbyImage image={imageData} alt={project.title} className="hover:scale-125 z-0 relative ease duration-50 " style={{}} />
         ) : null;
 
         const postdate =
@@ -44,21 +44,21 @@ const Projects = () => {
 
         return (
           <div
-            className={`h-auto border border-solid border-black  col-span-1 max-w-full ${colSpanClass}`}
+            className={`h-auto border border-solid border-black overflow-hidden  col-span-1 max-w-full ${colSpanClass}`}
             style={{ textAlign: "col" }}
             key={index}
           > <Link className="no-underline "
           to={`/portfolio-test/${project.slug}/`}>
             {image}
             </Link>
-            <div className="py-4 flex justify-between px-4 border-black border-y">
+            <div className="py-4 bg-krzyzowka  relative  z-50 flex justify-between px-4 border-black border-y">
               <Link className="no-underline "
               to={`/portfolio-test/${project.slug}/`}>
-                <h2 className="text-2xl font-bold text-black no-underline	 font-acumin">
+                <h2 className="text-xl font-bold text-black no-underline	 font-acumin">
                   {project.title}
                 </h2>
               </Link>
-              <span className="text-2xl">{year && `${year}`}</span>
+              <span className="text-xl">{year && `${year}`}</span>
             </div>
             <div className="p-4 text-black">
               {tags.length > 0 &&
