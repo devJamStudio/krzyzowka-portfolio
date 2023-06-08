@@ -20,7 +20,7 @@ const Search = () => {
     }
   `);
 
-  const projects = data.allContentfulPortolio.nodes;
+  const projects = data.allContentfulPortfolio.nodes;
 
   const search = (event) => {
     const query = event.target.value.toLowerCase();

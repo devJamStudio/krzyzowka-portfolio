@@ -20,7 +20,7 @@ const Projects = () => {
     }
   `);
 
-  const projects = data.allContentfulPortolio.nodes;
+  const projects = data.allContentfulPortfolio.nodes;
 
   return (
     <div className="py-8  border-black grid md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-6">

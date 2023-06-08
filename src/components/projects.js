@@ -20,7 +20,7 @@ const Projects = () => {
     }
   `);
 
-  const projects = data.allContentfulPortolio.nodes;
+  const projects = data.allContentfulPortfolio.nodes;
 
   return projects.map((project, index) => {
     const imageData = project.image?.gatsbyImageData;
