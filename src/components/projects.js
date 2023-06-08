@@ -38,13 +38,13 @@ const Projects = () => {
          <Link className="no-underline" 
           to={`/portfolio-test/${project.slug}/`}>{image}    </Link>
         <div className="py-4 px-4 overflow-hidden relative bg-krzyzowka z-50 border-black border-y flex justify-between">
-          <Link className="no-underline" 
+          <Link className="no-underline sm:min-h-[70px]" 
           to={`/portfolio-test/${project.slug}/`}>
-          <h2 className="text-xl  font-bold no-underline overflow-hidden font-semibold text-black font-acumin">
+          <h2 className=" text-md md:text-xl  font-bold no-underline overflow-hidden font-semibold text-black font-acumin">
               {project.title}
             </h2>
           </Link>
-          <span className="text-xl font-acumin leading-[40px]">{year && `${year}`}</span>
+          <span className="text-xl font-acumin">{year && `${year}`}</span>
         </div>
         <div className="p-4   overflow-hidden">
           {tags.length > 0 &&

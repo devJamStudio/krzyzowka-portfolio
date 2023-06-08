@@ -11,8 +11,8 @@ import { StaticImage } from "gatsby-plugin-image"
 const About = () => (
     <Jam>
     <div className="w-[95%] mx-auto  min-h-[50vh] flex flex-col md:flex-row  gap-16">
-      <div className="w-full  min-h-[60vh] mb-0 flex flex-col justify-between h-max  mb-4 md:w-6/12">
-        <h1 className="text-2xl font-light md:text-3xl">
+      <div className="w-full  min-h-[60vh] mb-0 flex flex-col justify-baseline h-max  mb-4 md:w-6/12">
+      <h1 className="text-[3rem] md:text-2xl font-light md:text-[64px] mb-0 md:leading-[80px] mt-8">
           Cześć, z tej strony  <span className="font-bold">Barbara</span>
         </h1>
         <div className="flex flex-col justify-between py-0 mb-0 ">
@@ -24,7 +24,7 @@ Lubię projekty społeczne, oraz takie, które są przyjazne dla środowiska, dl
         </p>
       </div>
       </div>
-      <div className="w-full  md:w-6/12 flex flex-col justify-beetween">
+      <div className="w-full  md:w-6/12 flex flex-col justify-baseline">
         
         
       <StaticImage

@@ -3,19 +3,20 @@ import { Link } from "gatsby"
 
 import Jam from "../components/jam"
 import Seo from "../components/seo"
-
+import OfferList from "../components/offer-list"
 import Projects from "../components/projects"
 
 
 const PortoflioPage = () => (
   <Jam>
-    <div
-    className="grid-cols-1 w-[95%] mx-auto py-8 sm:grid-cols-2 md-grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6	gap-4 grid"
-    >
-    <Projects/>
-
-    </div>
-    <Link to="/">Go back to the homepage</Link>
+    <div className="w-[95%] mx-auto   min-h-[70vh] mb-0 flex flex-col justify-baseline h-max ">
+      <h1 className="text-[3rem] md:text-2xl font-light md:text-[64px] mb-0 md:leading-[80px] mt-[4rem]">
+      Poznaj moją <span className="font-bold">ofertę</span>. Umówmy się na konsultację, aby wybrać odpowiedni pakiet dla Twojej marki.  
+        </h1>
+        <div className="flex flex-col justify-between py-0 mb-0 ">
+      < OfferList />
+      </div>
+      </div>
   </Jam>
 )
 

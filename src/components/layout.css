@@ -262,3 +262,69 @@ pre tt:after {
   
   }
 }
+
+/* Testimonials */
+.testimonial-slide p {
+  max-width:100%;
+}
+.swiper-button-next{
+  bottom:0px!important;
+  top:90%!important;
+  z-index:50;
+  width:40px!important;
+  height:40px!important;
+
+
+}
+.swiper-button-prev{
+  bottom:0px!important;
+  top:90%!important;
+  left:90%!important;
+  z-index:50;
+  width:40px!important;
+  height:40px!important;
+  margin-right:30px;
+
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+  z-index:-10;
+}
+  .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+  text-align: left!important;
+}
+.swiper-pagination-bullet-active{
+  background-color: black!important;
+}
+.swiper-pagination-clickable .swiper-pagination-bullet{border:1px solid black!important;background:transparent;opacity:1}
+.swiper-button-prev::after{ 
+
+  top: 50%;
+  left: 50%;
+  border: solid black 2px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position:center;
+  background-repeat:no-repeat;
+  content:''!important;
+  border-radius:50%;
+  background-image:url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.334 10.0002H3.33398" stroke="black" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/><path d="M7.22266 15.0002C7.22266 12.2388 4.98408 10.0002 2.22266 10.0002" stroke="black" stroke-width="1.5" stroke-miterlimit="10"/><path d="M7.22266 5.00024C7.22266 7.76167 4.98408 10.0002 2.22266 10.0002" stroke="black" stroke-width="1.5" stroke-miterlimit="10"/></svg>')!important}
+/* Styles for next navigation arrow */
+.swiper-button-next::after {
+  top: 50%;
+  left: 50%;
+  border: solid black 2px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position:center;
+  background-repeat:no-repeat;
+  content:''!important;
+  border-radius:50%;
+  background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.22266 10.0002H17.2227" stroke="black" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/><path d="M13.334 15.0002C13.334 12.2388 15.5726 10.0002 18.334 10.0002" stroke="black" stroke-width="1.5" stroke-miterlimit="10"/><path d="M13.334 5.00024C13.334 7.76167 15.5726 10.0002 18.334 10.0002" stroke="black" stroke-width="1.5" stroke-miterlimit="10"/></svg>')!important;
+}
