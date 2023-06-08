@@ -16,7 +16,7 @@ import Seo from '../components/seo'
 
       class BlogPostTemplate extends React.Component {
         render() {
-          const post = get(this.props, 'data.contentfulPortolio')
+          const post = get(this.props, 'data.contentfulPortfolio')
           const next = get(this.props, 'data.next')
           const previous = get(this.props, 'data.previous')
           const options = {
@@ -89,7 +89,7 @@ export const pageQuery = graphql`
     $previousPostSlug: String
     $nextPostSlug: String
   ) {
-    contentfulPortolio(slug: { eq: $slug }) {
+    contentfulPortfolio(slug: { eq: $slug }) {
       slug
       title
       heroImage {
@@ -103,11 +103,11 @@ export const pageQuery = graphql`
         
       }
     }
-    previous: contentfulPortolio(slug: { eq: $previousPostSlug }) {
+    previous: contentfulPortfolio(slug: { eq: $previousPostSlug }) {
       slug
       title
     }
-    next: contentfulPortolio(slug: { eq: $nextPostSlug }) {
+    next: contentfulPortfolio(slug: { eq: $nextPostSlug }) {
       slug
       title
     }

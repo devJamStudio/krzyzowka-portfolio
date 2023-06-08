@@ -10,7 +10,7 @@ const Search = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      allContentfulPortolio {
+      allContentfulPortfolio {
         nodes {
           title
           slug

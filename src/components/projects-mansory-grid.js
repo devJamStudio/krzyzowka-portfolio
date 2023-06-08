@@ -6,7 +6,7 @@ import { Link } from "gatsby";
 const Projects = () => {
   const data = useStaticQuery(graphql`
     {
-      allContentfulPortolio {
+      allContentfulPortfolio {
         nodes {
           title
           slug

@@ -5,8 +5,8 @@ import { Link } from 'gatsby'
 import Jam from "../components/jam"
 
 const TagTemplate = ({ data, pageContext }) => {
-  const { allContentfulPortolio } = data
-  const { edges } = allContentfulPortolio
+  const { allContentfulPortfolio } = data
+  const { edges } = allContentfulPortfolio
   const { tag } = pageContext
 
   return (
@@ -61,7 +61,7 @@ const TagTemplate = ({ data, pageContext }) => {
 
 export const query = graphql`
   query($tag: String) {
-    allContentfulPortolio(filter: { tags: { eq: $tag } }) {
+    allContentfulPortfolio(filter: { tags: { eq: $tag } }) {
       edges {
         node {
           title

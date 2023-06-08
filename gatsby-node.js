@@ -9,7 +9,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const result = await graphql(`
     {
-      allContentfulPortolio {
+      allContentfulPortfolio {
         nodes {
           title
           slug
@@ -25,8 +25,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return;
   }
 
-  const posts = result.data.allContentfulPortolio.nodes;
-  const tags = result.data.allContentfulPortolio.distinct;
+  const posts = result.data.allContentfulPortfolio.nodes;
+  const tags = result.data.allContentfulPortfolio.distinct;
 
   // Create blog posts pages
   // But only if there's at least one blog post found in Contentful

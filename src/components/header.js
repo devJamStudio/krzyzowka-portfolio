@@ -38,8 +38,8 @@ function Header({ siteTitle }) {
 )
     const MenuCloseIcon = () => (
       <svg
-      width="38"
-      height="19"
+      width="24"
+      height="24"
       viewBox="0 0 38 19"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +49,7 @@ function Header({ siteTitle }) {
     </svg>);
 
   return (
-    <nav className=" flex items-center  md:h-[69px!important]  flex font-acumin bg-krzyzowka text-black overflow-hidden flex-wrap w-full items-center text-sm justify-between border border-black md:p-3 bg-krzyzowka ">
+    <nav className=" flex items-center  lg:max-h-[69px] ease-in duration-200 flex font-acumin bg-krzyzowka text-black overflow-hidden flex-wrap w-full items-center text-sm justify-between border border-black md:px-3 bg-krzyzowka ">
       <div className="flex items-center flex-shrink-0   px-[30px] text-black w-1/4">
         <Link to={`/`}>
           <Logo />
