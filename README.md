@@ -1,4 +1,8 @@
 # krzyzowka-gatsbyjs-tailwindcss
 Portfolio made using:
-TailwinCSS 3.2.7
 Gatsby 
+TailwinCSS 
+Source contentful 
+Instagram components (grid & slider)
+formspree to handle form 
+simple search & dark mode switch ready to use 

@@ -62,3 +62,31 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     });
   }
 };
+// gatsby-node.js
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+
+  const typeDefs = `
+    type ContentfulOffer implements Node {
+      tab1Header: String
+      tab1List: [String]
+      tab1Price: String
+      tab2Header: String
+      tab2List: [String]
+      tab2Price: Float  # Updated to use a number type
+      tab3Header: String
+      tab3List: [String]
+      tab3Price: Float  # Updated to use a number type
+      description: ContentfulOfferDescription
+      name: String
+      price: String
+    }
+
+    type ContentfulOfferDescription {
+      description: String
+    }
+  `;
+
+  createTypes(typeDefs);
+};

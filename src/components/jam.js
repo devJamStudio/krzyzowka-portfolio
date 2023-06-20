@@ -4,7 +4,7 @@ import Header from "./header"
 import "./layout.css"
 import Footer from "../components/footer"
 
-const Jam = ({ children }) => {
+const Jam = ({ children, themeColor, showHeader }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -14,17 +14,21 @@ const Jam = ({ children }) => {
       }
     }
   `)
-
+  React.useEffect(() => {
+    document.documentElement.style.backgroundColor = themeColor; // Set the background color of the root HTML element
+  }, [themeColor]);
+  
   return (
     <>
-      <div className="bg-krzyzowka text-black row px-4 flex-col container--main flex"
+      <div className="text-black  min-h-screen row px-4 flex-col container--main flex"
         style={{
           margin: `0 auto`,
           maxWidth: `var(--size-content)`,
           padding: `var(--size-gutter)`,
+          backgroundColor: themeColor, 
         }}
       >
-        <div className="menu--wrapper w-[95%] mx-auto flex py-8">
+        <div className={`menu--wrapper w-[95%] mx-auto flex pt-8 ${!showHeader && 'flex lg:hidden'}`}>
           <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
         </div>
         <div className="w-100 columns-2 flex flex-col flex-1 col-span-2 md:col-span-3 lg:col-span-5">

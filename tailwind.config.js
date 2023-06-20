@@ -13,12 +13,13 @@ module.exports = {
         'md': '768px',
         'lg': '1024px',
         'xl': '1280px',
+        '2xl': '1440px',
       },
       colors:{
         krzyzowka:'#E0ECE9'
       },
       fontFamily: {
-        'acumin': ['acumin-pro', 'sans-serif']
+        'acumin': ['Acumin Pro Wide', 'sans-serif']
         },
         fontSize: {
           sm: ['13px', '20px'],

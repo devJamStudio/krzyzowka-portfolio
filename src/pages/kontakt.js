@@ -4,6 +4,7 @@ import Jam from "../components/jam"
 import Seo from "../components/seo"
 import Contact from "../components/contact-form"
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+const themeColor =  '#E0ECE9';
 
 const socialMediaLinks = [
   {
@@ -20,7 +21,7 @@ const socialMediaLinks = [
   },
 ];
 const ContactPage = () => (
-  <Jam>
+  <Jam  themeColor={themeColor} showHeader={true}>
     
     <div className="py-5 mt-6 flex min-h-[80vh] flex-col md:flex-row w-[95%] mx-auto">
       <div className="w-full flex-col md:w-1/2 flex flex-col justify-between">

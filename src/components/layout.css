@@ -4,8 +4,7 @@
   --color-primary: blue;
   --color-code-bg: #fff4db;
   --color-code: #8a6534;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-sans: Acumin Pro Wide,sans-serif;
   --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
   --font-lg: 18px;
@@ -42,7 +41,7 @@ body {
   font-weight: normal;
   margin: 0;
   word-wrap: break-word;
-  background:#E0ECE9;
+ /* background:#E0ECE9;*/
 }
 a {
   background-color: transparent;
@@ -327,4 +326,23 @@ pre tt:after {
   content:''!important;
   border-radius:50%;
   background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.22266 10.0002H17.2227" stroke="black" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/><path d="M13.334 15.0002C13.334 12.2388 15.5726 10.0002 18.334 10.0002" stroke="black" stroke-width="1.5" stroke-miterlimit="10"/><path d="M13.334 5.00024C13.334 7.76167 15.5726 10.0002 18.334 10.0002" stroke="black" stroke-width="1.5" stroke-miterlimit="10"/></svg>')!important;
+}
+.empty-element{
+  display:none;
+}
+@media screen and (min-width: 800px) {
+  
+
+.empty-element {
+  display:block;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 100%; 
+ 
+  /* Maintain the aspect ratio of the empty element */
+}}
+
+.decoration-element{
+  background-size:cover;
+  background-repeat:no-repeat;
 }

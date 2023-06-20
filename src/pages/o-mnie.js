@@ -6,11 +6,12 @@ import Seo from "../components/seo"
 
 import Projects from "../components/projects"
 import { StaticImage } from "gatsby-plugin-image"
+const themeColor =  '#E0ECE9';
 
 
 const About = () => (
-    <Jam>
-    <div className="w-[95%] mx-auto  min-h-[50vh] flex flex-col md:flex-row  gap-16">
+  <Jam  themeColor={themeColor} showHeader={true}>
+  <div className="w-[95%]  pt-8  mx-auto  min-h-[50vh] flex flex-col md:flex-row  gap-16">
       <div className="w-full  min-h-[60vh] mb-0 flex flex-col justify-baseline h-max  mb-4 md:w-6/12">
       <h1 className="text-[3rem] md:text-2xl font-light md:text-[64px] mb-0 md:leading-[80px] mt-8">
           Cześć, z tej strony  <span className="font-bold">Barbara</span>

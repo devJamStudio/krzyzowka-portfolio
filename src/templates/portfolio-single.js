@@ -13,12 +13,12 @@ import Hero from '../components/hero'
 import Seo from '../components/seo'
 
 
-
       class BlogPostTemplate extends React.Component {
         render() {
           const post = get(this.props, 'data.contentfulPortfolio')
           const next = get(this.props, 'data.next')
           const previous = get(this.props, 'data.previous')
+          const themeColor = post.themeColor
           const options = {
             renderNode: {
               [BLOCKS.EMBEDDED_ASSET]: (node) => {
@@ -33,7 +33,7 @@ import Seo from '../components/seo'
             },
           };
           return (
-            <Jam location={this.props.location}>
+            <Jam location={this.props.location} themeColor={themeColor} showHeader={true}>
             <Seo
           title={post.title}
         />
@@ -94,6 +94,7 @@ export const pageQuery = graphql`
     contentfulPortfolio(slug: { eq: $slug }) {
       slug
       title
+      themeColor
       heroImage {
         gatsbyImage(layout: FULL_WIDTH, placeholder: BLURRED, width: 1280)
         resize(height: 630, width: 1200) {

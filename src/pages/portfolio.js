@@ -5,11 +5,12 @@ import Jam from "../components/jam"
 import Seo from "../components/seo"
 
 import Projects from "../components/projects-mansory-grid"
+const themeColor =  '#E0ECE9';
 
 
 const PortoflioPage = () => (
-  <Jam>
-    <div
+  <Jam  themeColor={themeColor} showHeader={true}>
+  <div
     className="w-[95%] mx-auto"
     >
     <Projects/>

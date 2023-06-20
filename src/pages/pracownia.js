@@ -7,12 +7,14 @@ import Seo from "../components/seo"
 import Tesimonials from "../components/testimonials"
 import InstagramSlider from "../components/instagram-slider"
 import Friends from "../components/friends"
+const themeColor =  '#E0ECE9';
+
 const WorkShopPage = ({ data }) => {
   const heroImg = getImage(data.contentfulWorkshop.heroImg)
 
   return (
-    <Jam>
-      <div className="  w-[95%] mx-auto flex flex-col min-h-[20vh] items-center">
+    <Jam  themeColor={themeColor} showHeader={true}>
+    <div className="  w-[95%] mx-auto flex flex-col min-h-[20vh] items-center">
         <div className="w-full flex r">
           <h1 className="text-[3rem] md:text-2xl font-light md:text-[64px] mb-0 md:leading-[80px] mt-8">
             Witaj w <span className="font-bold">Pracowni grafiki Barbary <br className="hidden lg:block"></br>Olejarczyk.</span>

@@ -49,7 +49,7 @@ function Header({ siteTitle }) {
     </svg>);
 
   return (
-    <nav className=" flex items-center  lg:max-h-[69px] ease-in duration-200 flex font-acumin bg-krzyzowka text-black overflow-hidden flex-wrap w-full items-center text-sm justify-between border border-black md:px-3 bg-krzyzowka ">
+    <nav className=" flex items-center  lg:max-h-[69px] ease-in duration-200 flex font-acumin  text-black overflow-hidden flex-wrap w-full items-center text-sm justify-between border border-black md:px-3 ">
       <div className="flex items-center flex-shrink-0   px-[30px] text-black w-1/4">
         <Link to={`/`}>
           <Logo />

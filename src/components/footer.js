@@ -21,14 +21,14 @@ const Footer = ({ siteTitle }) => {
             </Link>
           </div>
           <div className="border-black flex-grow md:w-2/3">
-            <div className="md:border-b flex flex-row justify-between" id="ItemZ">
+            <div className="flex flex-row justify-between" id="ItemZ">
               <div className="flex-col p-6 pr-0 flex lg:w-6/12">
                 <ul className="text-black mb-0 text-md font-light flex flex-col justify-between">
                   <li>
                     <Link to="/portfolio" className="flex align-center no-underline text-black font-light">
                       <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12.5002 5V19" stroke="black" stroke-linecap="square" stroke-linejoin="round"/>
-                        <path d="M5.50024 12H19.5002" stroke="black" stroke-linecap="square" stroke-linejoin="round"/>
+                        <path d="M12.5002 5V19" stroke="black" strokeLinecap="square" strokeLinejoin="round"/>
+                        <path d="M5.50024 12H19.5002" stroke="black" strokeLinecap="square" strokeLinejoin="round"/>
                       </svg>
                       Portfolio
                     </Link>
